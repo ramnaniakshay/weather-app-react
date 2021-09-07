@@ -9,7 +9,7 @@ body{
 }
 
 .app{
-  background-image: url('./assets/app-bg.jpg');
+  background-image: url('./assets/sunny-bg.jpg');
   background-size: cover;
   background-position: bottom;
   transition: 0.4 ease-out;
