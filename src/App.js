@@ -18,6 +18,7 @@ function App() {
       .then(result => {
         setQuery('');
         setWeather(result);
+        console.log(result);
       });
     }
   }
@@ -26,7 +27,7 @@ function App() {
   const today = format(date, 'MMMM do, yyyy, EEEE');
 
     return (
-      <div className="app">
+      <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app cold') : 'app'}>
         <main>
           <div className="search-box">
             <input
@@ -38,7 +39,7 @@ function App() {
             onKeyPress={search}
             />
           </div>
-          {/* TODO: Add different cities to the list of weather */}
+
           {/* TODO: Needs to change so it shows major cities weather before query search */}
           <div className="date">{today}</div>
           {(typeof weather.main != "undefined") ? (
@@ -54,7 +55,9 @@ function App() {
                 </div>
               </div>
             </div>
-          ) : ('')}
+          ) :
+          // /* TODO: Add different cities to the list of weather here */
+          ('')}
         </main>
       </div>
     );

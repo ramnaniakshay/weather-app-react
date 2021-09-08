@@ -12,11 +12,20 @@ body{
   background-image: url('./assets/sunny-bg.jpg');
   background-size: cover;
   background-position: bottom;
-  transition: 0.4 ease-out;
+  transition: 0.4s ease;
 }
 
 .app.warm {
   background-image: url('./assets/warm-bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s ease;
+}
+.app.cold {
+  background-image: url('./assets/cold-moutain-bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s ease;
 }
 
 main{
@@ -69,7 +78,7 @@ main{
   background-color: rgba(255,255,255, 0.2);
   border-radius: 10px;
 
-  margin: 10px auto;
+  margin: auto;
   padding: 20px;
 }
 
@@ -90,7 +99,7 @@ main{
   font-weight: 700;
   text-shadow: 2px 2px rgba(50,50,70,0.5);
 
-  margin: 10px auto;
+  margin: auto;
 }
 
 .weather-box{
