@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import api from './api';
+import Demo2 from './Demo2'
 const {format} = require('date-fns');
 
 function App() {
@@ -49,11 +50,13 @@ function App() {
                   <div className="weather"> {weather.weather[0].main} </div>
                 </div>
               </div>
+              <br/>
             </div>
           ) :
           // /* TODO: Add different cities to the list of weather here */
           // Sydney, Melbourne, Brisbane, Perth, Adelaide, Hobart, Canberra, Darwin
           ('')}
+          <Demo2 />
         </main>
       </div>
     );
